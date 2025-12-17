@@ -2193,7 +2193,7 @@ export function IdleGame() {
       console.error("Error importing save:", error)
       toast({
         title: "Import Failed",
-        description: "Invalid save code. Please try again.",
+        description: ("Invalid save code. Please try again.", error),
         variant: "destructive",
         duration: 3000,
       })
