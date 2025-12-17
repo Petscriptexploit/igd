@@ -2163,7 +2163,7 @@ export function IdleGame() {
   const importSave = () => {
     try {
       const decodedSave = atob(saveCode)
-      const parsedSave = JSON.JSON.parse(decodedSave)
+      const parsedSave = JSON.parse(decodedSave)
 
       // Ensure all required properties exist by merging with initialState
       const safeGameState = {
