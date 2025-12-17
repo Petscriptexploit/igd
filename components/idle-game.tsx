@@ -2191,9 +2191,10 @@ export function IdleGame() {
       setSaveCode("")
     } catch (error) {
       console.error("Error importing save:", error)
+      navigator.clipboard.writeText(error)
       toast({
         title: "Import Failed",
-        description: ("Invalid save code. Please try again.", error),
+        description: "Invalid save code. Please try again.",
         variant: "destructive",
         duration: 3000,
       })
